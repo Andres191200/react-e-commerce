@@ -1,0 +1,228 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.mobile-logo-menu{
+    display:none;
+}
+
+.header{
+    display:flex;
+    align-items: center;
+    width:100vw;
+    height:50px;
+    background:#000;
+    font:16px century gothic;
+}
+
+.header ul{
+    display:flex;
+    align-items: center;
+}
+
+.header ul li{
+    display:inline;
+    padding:10px;
+}
+
+.header ul li a{
+    text-decoration: none;
+    color:#FFF;
+}
+
+.header ul li:hover{
+    background:#333;
+    transition: background .5s;
+}
+
+.icon-container{
+    cursor:pointer;
+}
+
+
+
+.icon-container{
+    position:absolute;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 10px;
+    background:#FFF;
+    height:40px;
+    width:40px;
+    right:0;
+}
+
+
+.shop-icon{
+    transform:translate(-1px,1px);
+    color:#000;
+    font-size: 20px;
+}
+
+.dropdown-shop-card{
+    position:absolute;
+    right:0;
+    top:50px;
+    height:30vw;
+    min-height: 200px;
+    width:20vw;
+    min-width: 150px;
+    background:#CCC;
+    opacity: 0;
+    transition:.5s;
+}
+
+.config, .dark-mode-switch-container{
+    margin-right: 60px;
+    transition:.5s;
+    overflow:hidden;
+    position:absolute;
+}
+
+.cog-icon{
+    transform:translate(0,0);
+    transition:.5s;
+    font-size: 25px;
+}
+
+.empty-cart{
+    margin-top:20px;
+    font-size: 18px;
+}
+
+.empty-cart-icon-container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height:60%;
+}
+
+.empty-cart-icon{
+    font-size:10vw;
+}
+
+.visible{
+    opacity:1 !important;
+    transition: .5s;
+}
+
+.active{
+    width:125px;
+    border-radius: 10px;
+    transition:.5s;
+    pointer-events: none;
+}
+
+.active .cog-icon{
+    pointer-events: all;
+}
+
+.active > svg{
+    transform:translateX(45px) rotate(180deg);
+}
+
+.dark-mode-switch-container{
+    display:flex;
+    flex-direction: column;
+    position:absolute;
+    pointer-events: none;
+    z-index:50;
+    width:70px;
+    right:-10px;
+}
+
+.dark-mode-switch-container > h1{
+    font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (orientation:portrait){
+    .header ul{
+        flex-direction: column;
+        background:#000;
+        opacity:0;
+        position:absolute;
+        transform:translateY(85px);
+        transition:.5s;
+        width:100%;
+    }
+
+    .mobile-logo-menu{
+        display:flex;
+        justify-content: center;
+        align-items:center;
+        height:100%;
+        width:50px;
+        background:transparent;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    .mobile-logo-menu > span{
+        height:2px;
+        width:30px;
+        margin: 5px 0;
+        background:#FFF;
+    }
+
+    .empty-cart{
+        font-size:17px;
+    }
+
+}
